@@ -344,7 +344,7 @@ document.querySelector("#btnUnitCalculator").addEventListener("click", function(
   function giveMeInfo(userMoney , productUnitPrice){
     //how many product i m able to buy
     var numberOfProduct = userMoney/ productUnitPrice;
-    var numberOfProduct = Math.trunc(numberOfProduct);
+    var numberOfProduct = Math.floor(numberOfProduct);
 
     document.querySelector("#totalProduct").innerHTML = "You will be able to buy a maximum " + numberOfProduct +" number of product.";
     //how mouch i have to pay 
