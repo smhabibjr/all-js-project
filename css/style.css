@@ -1,0 +1,148 @@
+/*Remove default styles*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.main-container .top-main-section .btn-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container .top-main-section .btn{
+  text-decoration: none;
+  width: 100%;
+}
+.main-container .top-main-section .btn:hover{
+  color: white;
+  background: black;
+}
+
+.title-section .button .plus-icon{
+  cursor: pointer;
+  font-size: 20px;
+}
+.project-block{
+  /*display: none;*/
+}
+
+/* --------- ------ project 01 ---------------*/
+.main-project-block .project-block .main-container .title-text{
+  border: solid 1px black;
+  height: 30px;
+  width: 550px;
+}
+
+.main-project-block .project-block .main-container .result{
+  margin-top: 5px;
+  border: solid 1px black;
+}
+
+.main-project-block .project-block .compose-twitter{
+  margin-top: 10px;
+
+}
+
+.main-project-block .project-block .compose-twitter .text-input{
+  border: solid 1px black;
+  height: 150px;
+  width: 100%;
+}
+
+.main-project-block .project-block .btn-copy{
+  border: solid 1px black;
+    height: auto;
+    width: auto;
+  padding: 5px;
+  cursor: pointer;
+}
+
+/*------------------- project 2 sign up form validation ----------------------------*/
+
+
+.main-project-block .project-block .form-outline .eye{
+  position: relative;
+  float: right;
+  margin-top: 15px;
+  margin-left: -25px;
+  cursor: pointer;
+}
+.main-project-block .project-block .form-outline .far{
+  position: relative;
+  float: right;
+  margin-top: 15px;
+  margin-left: -20px;
+}
+
+.main-project-block .project-block #message .valid{
+  color: green;
+  font-size: 12px;
+}
+.main-project-block .project-block #message .valid::before{
+  content: "✔ ";
+}
+
+.invalid{
+  font-size: 12px;
+  color: red;
+}
+.invalid::before{
+  content: "X ";
+}
+
+
+
+/*----------------------sign up form ---------------------*/
+.gradient-custom-3 {
+  /* fallback for old browsers */
+  background: #84fab0;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5))
+}
+.gradient-custom-4 {
+  /* fallback for old browsers */
+  background: #84fab0;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
+}
+
+
+/*---------------project 3 Name correction and Automatic username genarator ---------------------*/
+
+.main-project-block .project-block .project-3 .project-content{
+  width: 100%;
+}
+.main-project-block .project-block .project-3 .project-content .topic-content{
+  width: 50%;
+  padding: 5px;
+}
+
+.main-project-block .project-block .project-3 .project-content .topic-content .input-field{
+  padding: 5px;
+}
+
+.main-project-block .project-block .project-3 .project-content .topic-content .input-field .copy-icon{
+  position: relative;
+  float: right;
+  color: green;
+  font-size: 20px;
+  margin-top: -30px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.main-project-block .project-block .project-3 .project-content .input-field .status{
+  position: relative;
+  float: right;
+  margin-top: -25px;
+  margin-right: 5px;
+}
