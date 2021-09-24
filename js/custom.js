@@ -349,11 +349,11 @@ document.querySelector("#btnUnitCalculator").addEventListener("click", function(
     document.querySelector("#totalProduct").innerHTML = "You will be able to buy a maximum " + numberOfProduct +" number of product.";
     //how mouch i have to pay 
     var haveToPay = numberOfProduct * productUnitPrice;
-    document.querySelector("#haveToPay").innerHTML = "You have to pay "+ haveToPay +" money";
+    document.querySelector("#haveToPay").innerHTML = "You have to pay "+ haveToPay +" Euro";
     
     //How much i will get back from shop
     var moneyGetBack = userMoney % productUnitPrice;
-    document.querySelector("#getBackMoney").innerHTML = "You will get back "+ moneyGetBack +" money";
+    document.querySelector("#getBackMoney").innerHTML = "You will get back "+ moneyGetBack +" Euro";
   }
 });
 document.querySelector("#btnRefresh").addEventListener("click", function(){
