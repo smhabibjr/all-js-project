@@ -301,13 +301,23 @@ document.querySelector("#copyUserName").addEventListener("click", function(){
   let userName = document.querySelector("#userName");
   userName.select();
   document.execCommand("copy");
+  //after click the copy icon input field would be disabled
+  //javaschript 
+  //document.querySelector("#userName").disabled = "true";
+  //jquery 
+  $("#userName").prop("disabled", true);
+
 })
 
 document.querySelector("#copyUserPassword").addEventListener("click", function(){
   let userPassword = document.querySelector("#autoPassword");
   userPassword.select();
   document.execCommand("copy");
-  console.log("hi there");
+  //after click the copy icon input field would be disabled
+  //javaschript 
+  //document.querySelector("#autoPassword").disabled = "true";
+  //jquery 
+  $("#autoPassword").prop('disabled', true);
 })
 
 
@@ -319,6 +329,40 @@ $("#toggle-btn4").click(function(){
   $(this).toggleClass("fa-plus fa-times");
   $("#toggle-project-block4").slideToggle();
 });
+
+
+document.querySelector("#btnUnitCalculator").addEventListener("click", function(){
+  let userMoney = document.querySelector("#amountOfMoney").value;
+  let productUnitPrice = document.querySelector("#pruductUnitPrice").value;
+ 
+  if(userMoney != "" && productUnitPrice != ""){
+    giveMeInfo(userMoney, productUnitPrice);
+  }else{
+    alert("Please check your input field");
+  }
+  
+  function giveMeInfo(userMoney , productUnitPrice){
+    //how many product i m able to buy
+    var numberOfProduct = userMoney/ productUnitPrice;
+    var numberOfProduct = Math.trunc(numberOfProduct);
+
+    document.querySelector("#totalProduct").innerHTML = "You will be able to buy a maximum " + numberOfProduct +" number of product.";
+    //how mouch i have to pay 
+    var haveToPay = numberOfProduct * productUnitPrice;
+    document.querySelector("#haveToPay").innerHTML = "You have to pay "+ haveToPay +" money";
+    
+    //How much i will get back from shop
+    var moneyGetBack = userMoney % productUnitPrice;
+    document.querySelector("#getBackMoney").innerHTML = "You will get back "+ moneyGetBack +" money";
+  }
+});
+document.querySelector("#btnRefresh").addEventListener("click", function(){
+  document.querySelector("#amountOfMoney").value = "";
+  document.querySelector("#pruductUnitPrice").value = "";
+  document.querySelector("#totalProduct").innerHTML = "Output";
+  document.querySelector("#haveToPay").innerHTML = "";
+  document.querySelector("#getBackMoney").innerHTML = "";
+})
 
 
   });

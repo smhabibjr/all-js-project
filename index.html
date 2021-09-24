@@ -38,7 +38,7 @@
             </div>
           </div>
           <!-- ------------------- project 01  Twitter Character Counter --------------------->
-          <div class="main-project-block">
+          <div style="display: none;" class="main-project-block">
             <div class="title-section d-flex justify-content-between shadow-sm p-3 mb-5 bg-body rounded">
               <div class="title">
                 <h5>Twitter Character Counter</h5>
@@ -263,6 +263,7 @@
             </div>
           </div>
 
+          <!------------------------------- project 4 -------------------------------------->
           <div>
             <div class="title-section d-flex justify-content-between shadow-sm p-3 mb-5 bg-body rounded">
               <div class="title">
@@ -273,9 +274,25 @@
               </div>
             </div>
             <div class="project-block" id="toggle-project-block4">
-              <p class="shadow-lg p-3 mb-5 bg-body rounded">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-              </p>
+              <div class="d-flex justify-content-center">
+                <div class="d-flex justify-content-center">
+                  <input id="amountOfMoney" type="text" class="form-control p-2 m-2" placeholder=" total cash money" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                  <input id="pruductUnitPrice" type="text" class="form-control p-2 m-2" placeholder="unit price of product" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-center">
+                <button id="btnUnitCalculator" role="button" class="btn btn-secondary m-4">Calculate</button>
+                <button id="btnRefresh" class="btn btn-outline-success m-4">Refresh</button>
+              </div>
+
+              <div class="d-flex justify-content-center">
+              <div class="outputForUnitCalculator d-flex justify-content-center flex-column">
+                <h5 id="totalProduct">Output</h5>
+                <h5 id="haveToPay"></h5>
+                <h5 id="getBackMoney"></h5>
+              </div>
+            </div>
             </div>
           </div>
 

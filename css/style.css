@@ -146,3 +146,12 @@
   margin-top: -25px;
   margin-right: 5px;
 }
+
+/*---------------project 4 unit tester ---------------------*/
+
+.outputForUnitCalculator{
+  margin-top: 10px;
+  border: solid 1px red;
+  border-radius: 10px;
+
+}
