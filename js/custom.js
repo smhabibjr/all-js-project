@@ -380,29 +380,35 @@ document.querySelector("#btnBmiCalculator").addEventListener("click", function()
   var userWeight = document.querySelector("#userWeight").value;
   var userHeight = document.querySelector("#userHeight").value;
   var BmiResult =  bmi(userWeight, userHeight);
-  console.log(BmiResult);
-  document.querySelector("#bmiResult").innerHTML = "For the information you entered: " + " Height: " + userHeight+ " Weight : " + userWeight;
+  if(userWeight != "" && userHeight != ""){
+      document.querySelector("#bmiResult").innerHTML = "For the information you entered: " + " Height: " + userHeight+ " Weight : " + userWeight;
 
-  if(BmiResult < 18.5){
-    document.querySelector("#UnderWeight").innerHTML = "Your BMI is " + BmiResult + " , indicating your weight is in the underweight category for adults of your height.";
-    document.querySelector("#UnderWeight").style.color = "red";
-  }else if(BmiResult >= 18.5 && BmiResult < 24.9 ){
-    document.querySelector("#UnderWeight").innerHTML = "Your BMI is " + BmiResult + " , indicating your weight is in the normal category for adults of your height.";
-    document.querySelector("#UnderWeight").style.color = "green";
-  }else if(BmiResult >= 25 && BmiResult < 29.9 ){
-    document.querySelector("#UnderWeight").innerHTML = "Your BMI is " + BmiResult + " , indicating your weight is in the overweight category for adults of your height.";
-    document.querySelector("#UnderWeight").style.color = "red";
-  }else if(BmiResult > 30 ){
-    document.querySelector("#UnderWeight").innerHTML = "Your BMI is " + BmiResult + " , indicating your weight is in the  Obese category for adults of your height.";
-    document.querySelector("#UnderWeight").style.color = "red";
+    if(BmiResult < 18.5){
+      document.querySelector("#UnderWeight").innerHTML = "Your BMI is " + BmiResult + " , indicating your weight is in the underweight category for adults of your height.";
+      document.querySelector("#UnderWeight").style.color = "red";
+    }else if(BmiResult >= 18.5 && BmiResult < 24.9 ){
+      document.querySelector("#UnderWeight").innerHTML = "Your BMI is " + BmiResult + " , indicating your weight is in the normal category for adults of your height.";
+      document.querySelector("#UnderWeight").style.color = "green";
+    }else if(BmiResult >= 25 && BmiResult < 29.9 ){
+      document.querySelector("#UnderWeight").innerHTML = "Your BMI is " + BmiResult + " , indicating your weight is in the overweight category for adults of your height.";
+      document.querySelector("#UnderWeight").style.color = "red";
+    }else if(BmiResult > 30 ){
+      document.querySelector("#UnderWeight").innerHTML = "Your BMI is " + BmiResult + " , indicating your weight is in the  Obese category for adults of your height.";
+      document.querySelector("#UnderWeight").style.color = "red";
+    }
+  }else{
+    alert("Please check your data");
   }
-  /*if(BmiResult < 18 ){
-    document.querySelector("#UnderWeight").innerHTML = "your BMI is " + BmiResult + " , indicating your weight is in the underweight catefory for adults of your height.";
-    console.log("underweight");
-  }else if(BmiResult > 18 && BmiResult < 24){
-    document.querySelector("#normal").innerHTML = "your BMI is " + BmiResult + " , indicating your weight is in the normal catefory for adults of your height.";
-console.log("normal");
-  }*/
+  
+ document.querySelector("#bmiClear").addEventListener("click", function(){
+   document.querySelector("#userWeight").innerHTML = "";
+   document.querySelector("#userHeight").innerHTML = "";
+   document.querySelector("#bmiResult").innerHTML = "Output";
+   document.querySelector("#UnderWeight").innerHTML = "";
+   document.querySelector("#normal").innerHTML = "";
+   document.querySelector("#overWeight").innerHTML = "";
+   document.querySelector("#obese").innerHTML = "";
+ });
 
 });
 
