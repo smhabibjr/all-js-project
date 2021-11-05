@@ -413,4 +413,46 @@ document.querySelector("#btnBmiCalculator").addEventListener("click", function()
 });
 
 
+//------------ project 06---------------
+document.querySelector("#toggle-btn6").addEventListener("click", function(){
+  $(this).toggleClass("fa-plus fa-times");
+  $("#toggle-project-block6").slideToggle();
+})
+
+document.querySelector("#btnLoveCalculator").addEventListener("click", function(){
+  var randomNumber = Math.floor((Math.random() * 100) + 1);
+  var user_name = document.querySelector("#victimName").value;
+  var fiance_name = document.querySelector("#fianceName");
+  if(user_name != "" && fiance_name != ""){
+    console.log(user_name);
+  if(randomNumber > 70 ){
+    console.log("Positive love : " + randomNumber);
+    document.querySelector("#positiveResult").innerHTML = "Your love score is " + randomNumber + " %. Your love each other keneya to keneya";
+    document.querySelector("#negativeResult").hide;
+  }else{
+    console.log("negative Love " + randomNumber);
+    document.querySelector("#negativeResult").innerHTML ="Your love score is " + randomNumber + " %.";
+    document.querySelector("#positiveResult").hide;
+  }
+  }else{
+    alert("Check your input field !");
+  }
+});
+document.querySelector("#loveClear").addEventListener("click", function(){
+  document.querySelector("#positiveResult").innerHTML = "";
+  document.querySelector("#negativeResult").innerHTML = "";
+});
+
+
+$("#toggle-btn7").click(function(){
+$(this).toggleClass("fa-plus fa-times");
+$("#toggle-project-block7").slideToggle();
+});
+
+
+
+
+
+
+
   });
