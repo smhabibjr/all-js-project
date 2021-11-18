@@ -1,6 +1,41 @@
 $("document").ready(function () {
 
+    document.querySelector("#beginnerLavel").style.display = "block";
+    document.querySelector("#intermediateLavel").style.display = "none";
+    document.querySelector("#domLavel").style.display = "none";
+    document.querySelector("#advancedLavel").style.display = "none";
 
+  document.querySelector("#btnBeginner").addEventListener("click", function(){
+    document.querySelector("#beginnerLavel").style.display = "block";
+    document.querySelector("#intermediateLavel").style.display = "none";
+    document.querySelector("#domLavel").style.display = "none";
+    document.querySelector("#advancedLavel").style.display = "none";
+  
+  });
+
+  document.querySelector("#btnIntermediate").addEventListener("click", function(){
+    document.querySelector("#beginnerLavel").style.display = "none";
+    document.querySelector("#intermediateLavel").style.display = "block";
+    document.querySelector("#domLavel").style.display = "none";
+    document.querySelector("#advancedLavel").style.display = "none";
+  
+  });
+
+  document.querySelector("#btnDom").addEventListener("click", function(){
+    document.querySelector("#beginnerLavel").style.display = "none";
+    document.querySelector("#intermediateLavel").style.display = "none";
+    document.querySelector("#domLavel").style.display = "block";
+    document.querySelector("#advancedLavel").style.display = "none";
+  
+  });
+
+  document.querySelector("#btnAdvanced").addEventListener("click", function(){
+    document.querySelector("#beginnerLavel").style.display = "none";
+    document.querySelector("#intermediateLavel").style.display = "none";
+    document.querySelector("#domLavel").style.display = "none";
+    document.querySelector("#advancedLavel").style.display = "block";
+  
+  });
 
 
 
@@ -448,6 +483,38 @@ $("#toggle-btn7").click(function(){
 $(this).toggleClass("fa-plus fa-times");
 $("#toggle-project-block7").slideToggle();
 });
+
+$("#btnCheckLeapYear").click(function(){
+  
+  var inputYear = $("#yearName").val();
+  if(inputYear !== ""){
+    var convertedToInteger = parseInt(inputYear);
+    var result = checkYear(convertedToInteger);
+    $("#leapYearResult").html(result);
+    
+  }else{
+    alert("Year requered");
+    $("#yearName").focus();
+  }
+});
+
+function checkYear(Year){
+  if(Year % 4 === 0){
+    if(Year % 100 === 0){
+      if( Year % 400 === 0){
+        return Year + " Leap year."
+      }else{
+        return Year + " Not leap year."
+      }
+    }else{
+      return Year + " Leap year."
+    }
+  }else{
+    return Year + " not leap year.";
+  }
+}
+
+
 
 
 
