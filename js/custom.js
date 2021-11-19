@@ -485,8 +485,7 @@ $("#toggle-project-block7").slideToggle();
 });
 
 $("#btnCheckLeapYear").click(function(){
-  
-  var inputYear = $("#yearName").val();
+  var inputYear = $("#pickYear").val();
   if(inputYear !== ""){
     var convertedToInteger = parseInt(inputYear);
     var result = checkYear(convertedToInteger);
@@ -513,7 +512,13 @@ function checkYear(Year){
     return Year + " not leap year.";
   }
 }
-
+ //----------------- jquery year picker 
+var current_year = new Date().getFullYear();
+$("#pickYear").yearpicker({
+  year: current_year,
+  startYear: 2012,
+  endYear: 2030
+});
 
 
 
